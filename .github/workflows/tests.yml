@@ -28,15 +28,15 @@ jobs:
       - name: ==> Verify Coverage and tests
         run: mix coveralls.html
     services:
-      pg:
-        image: postgres:13
-        ports: ['5432:5432'],
-        env:
+        pg:
+          image: postgres:13
+          ports: ['5432:5432'],
+          env:
           POSTGRES_PASSWORD: postgress
-        options: >=
-          --helth-cmd pg_isready
-          --helth-interval 10s
-          --helth-timeout 5s
-          --helth-retries 5
+          options: >=
+            --helth-cmd pg_isready
+            --helth-interval 10s
+            --helth-timeout 5s
+            --helth-retries 5
 
 
