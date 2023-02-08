@@ -30,13 +30,11 @@ jobs:
     services:
         pg:
           image: postgres:13
-          ports: ['5432:5432'],
+          ports: ['5432:5432']
           env:
           POSTGRES_PASSWORD: postgress
-          options: >=
+          options: >-
             --helth-cmd pg_isready
             --helth-interval 10s
             --helth-timeout 5s
             --helth-retries 5
-
-
