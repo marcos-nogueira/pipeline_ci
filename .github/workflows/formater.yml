@@ -2,12 +2,15 @@ name: Verify Format
 
 on: pull_request
 
+env:
+  HOST: "localhost"
+
 jobs:
   check_format:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elixir: [1.12]
+        elixir: [1.13.4]
     steps:
       - uses: actions/checkout@v2
       - uses: erlef/setup-elixir@v1
